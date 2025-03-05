@@ -4,7 +4,8 @@ const mobiles = [
     {name: 'Oppo', price: 30000, camera: '12mp', color: 'black'},
     {name: 'Iphone', price: 100000, camera: '12mp', color: 'black'},
     {name: 'Walton', price: 31000, camera: '12mp', color: 'black'},
-    {name: 'HTC', price: 27000, camera: '12mp', color: 'black'}
+    {name: 'HTC', price: 27000, camera: '12mp', color: 'black'},
+    {name: 'FS', price: 227000, camera: '12mp', color: 'black'},
 ];
 
 function getCheapestPhone(phones){
@@ -19,4 +20,19 @@ function getCheapestPhone(phones){
 }
 
 const cheap = getCheapestPhone(mobiles);
-console.log('Cheapest phone is:', cheap);
+// console.log('Cheapest phone is:', cheap);
+
+
+function getBigestPhone(phones){
+    let maxPrice = phones[0];
+    for(const phone of phones){
+        // console.log(phone);
+        if(phone.price > maxPrice.price){
+            maxPrice = phone;
+        }
+    }
+    return maxPrice;
+}
+
+const highPrice = getBigestPhone(mobiles);
+console.log('High price is phone:', highPrice);
