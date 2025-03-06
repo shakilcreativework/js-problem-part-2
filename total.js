@@ -21,4 +21,4 @@ function getShoppingTotal(products){
 }
 
 const total = getShoppingTotal(products);
-console.log('tatal ajke khoshabo: ', total);
+console.log('tatal ajke khoshabo:', total);
